@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <locale.h>
+int main()
+{
+	int a, b;
+	setlocale(LC_CTYPE, "RUS");
+	puts("введите первое число:");
+	scanf_s("%d", &a);
+
+	puts("введите второе число:");
+	scanf_s("%d", &b);
+
+	printf("Выведите сумму %d\n", a + b);
+	printf("Выведите разность %d\n", a - b);
+	printf("Выведите произведение %d\n", a * b);
+	printf("Частное %d\n", (a / b)*1.);
+	printf("Остаток от деления %d\n", a % b);
+	return 0; 
+
+}
+#include <stdio.h>
+#include <locale.h>
+#define D=2.54;
+int main()
+{
+	int dym;
+	float result;
+	setlocale(LC_CTYPE, "RUS");
+	puts("введите число:");
+	scanf_s("%d", &dym);
+	result = D * dym;
+	printf("%d дюймов – это % .1f см", dym, result);
+
+}
