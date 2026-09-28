@@ -1,0 +1,107 @@
+Задание 1
+#include <stdio.h>
+#include <locale.h>
+int main()
+{
+	int a, b;
+	setlocale(LC_CTYPE, "RUS");
+	puts("введите первое число:");
+	scanf_s("%d", &a);
+
+	puts("введите второе число:");
+	scanf_s("%d", &b);
+
+	printf("Выведите сумму %d\n", a + b);
+	printf("Выведите разность %d\n", a - b);
+	printf("Выведите произведение %d\n", a * b);
+	printf("Частное %d\n", (a / b) * 1.);
+	printf("Остаток от деления %d\n", a % b);
+	return 0;
+
+}
+
+Задание 2
+#include <stdio.h>
+#include <locale.h>
+
+
+#define D 2.54
+
+int main()
+{
+	int dym;
+	float result;
+	setlocale(LC_ALL, "Russian");
+
+	puts("введите число:");
+	scanf_s("%d", &dym);
+
+	result = D * dym;
+  printf("%d дюймов – это % .2f см", dym, result);
+
+	return 0;
+
+}
+Задание 2)
+#include <stdio.h>
+#include <locale.h>
+int main()
+{
+	float mil, km;
+
+	setlocale(LC_CTYPE, "RUS");
+	puts("Введите колличество морских миль:");
+	scanf_s("%f", &mil);
+
+	km = mil * 1.852f; 
+	printf("%.2f морских миль = %.2f км\n", mil, km);
+	
+	return 0;
+}
+ЯЗадание 3
+#include <stdio.h>
+#include <locale.h>
+int main()
+{
+	float a, b;
+	setlocale(LC_CTYPE, "RUS");
+	puts("Введите число a:");
+	scanf_s("%f", &a);
+
+	puts("Введите число b:");
+	scanf_s("%f", &b);
+
+	printf("-------------------------\n");
+	printf("|  a*b  |  a+b  |  a-b  |\n");
+	printf("| %7.2f | %7.2f | %7.2f |\n",
+		a * b, a + b, a - b);
+	printf("-------------------------\n");
+
+
+}
+Домашнее задание
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    int a, b, c;
+    int k;
+
+    setlocale(LC_CTYPE, "RUS");
+
+    puts("Введите день рождения:");
+    scanf_s("%d", &a);
+
+    puts("Введите месяц рождения:");
+    scanf_s("%d", &b);
+
+    puts("Введите год рождения:");
+    scanf_s("%d", &c);
+
+    k = 2026 - c;
+
+    printf("Ваш возраст: %d лет\n", k);
+
+    return 0;
+}
