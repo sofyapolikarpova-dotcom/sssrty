@@ -83,15 +83,15 @@ int main()
 #include <stdio.h>
 #include <locale.h>
 
-int age()
+int age(int c)
 {
-   int res;
-   res=2026-c;
-   return res;
+    int res;
+    res = 2026 - c;
+    return res;
 }
 int main()
 {
-    int a, b, c;
+    int a, b, c, res;
 
     setlocale(LC_CTYPE, "RUS");
 
@@ -104,9 +104,9 @@ int main()
     puts("Введите год рождения:");
     scanf_s("%d", &c);
 
-    res=age(c);
+    res = age(c);
 
-    printf("Ваш возраст: %d лет\n", k);
+    printf("Ваш возраст: %d лет\n", res);
 
     return 0;
 }
